@@ -118,6 +118,3 @@ def kms_encrypt_file(profile,kms_dec_file,kms_key="account-key"):
     else:
         raise Exception("Could not encrypt %(kms_dec_file)s."%locals())
 
-def foo():
-    return "bla"
-

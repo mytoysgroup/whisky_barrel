@@ -16,7 +16,7 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/mytoysgroup/whisky_barrel",
     entry_points={
-        'console_scripts': ['pour = whisky_barrel.cert_lib:foo']
+        'console_scripts': ['pour = whisky_barrel.pour:main']
     },
     packages=setuptools.find_packages(),
     install_requires=['click','boto3'],
