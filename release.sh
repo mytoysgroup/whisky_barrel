@@ -3,9 +3,12 @@
 script_dir=$(cd "$(dirname "$BASH_SOURCE")"; pwd)
 cd "$script_dir"
 
-rm -r dist
+version="${1:?}"
 
-python setup.py sdist bdist_wheel
+echo "version='$version'" > wb_version.py
+
+if [ -d dist ]; then rm -r dist; fi
+python setup.py clean sdist bdist_wheel
 
 if ! twine --version
 then
