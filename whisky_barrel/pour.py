@@ -1,6 +1,10 @@
 import click
 @click.command()
 @click.argument('arg')
-def main(arg):
-    print("bla: '" + arg + "'")
+def openvpn(arg):
+    print("openvpn: '" + arg + "'")
 
+@click.command()
+@click.argument('arg')
+def pour(arg):
+    print("pour: " + arg)

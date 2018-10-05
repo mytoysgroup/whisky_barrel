@@ -16,7 +16,10 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/mytoysgroup/whisky_barrel",
     entry_points={
-        'console_scripts': ['pour = whisky_barrel.pour:main']
+        'console_scripts': [
+            'pour = whisky_barrel.pour:pour',
+            'pour-openvpn = whisky_barrel.pour:openvpn'
+        ]
     },
     packages=setuptools.find_packages(),
     install_requires=['click','boto3'],
